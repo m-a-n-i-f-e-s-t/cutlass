@@ -1205,7 +1205,7 @@ complement(Layout<Shape,Stride> const& layout)
 
 namespace detail {
 
-template <int NextStride, class Shape, class Stride, int... Is>
+template <auto NextStride, class Shape, class Stride, int... Is>
 CUTE_HOST_DEVICE constexpr
 auto
 inverse_seq(Shape const& shape, Stride const& stride, seq<Is...>)
